@@ -85,6 +85,9 @@ pintar_pantalla_color:
 pintar_pantalla_color_loop:
 
 		add		x3, x0, x2
+		adrp	x1, escenario	  // Variable arbol
+		add		x1, x1, :lo12:escenario
+		add     x1, x1, x2
 		str		w1, [x3, #0]
 
 		add		x2, x2, #4
